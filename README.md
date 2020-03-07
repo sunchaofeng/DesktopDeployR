@@ -55,7 +55,7 @@ they lack sufficient system privileges).
 Download R-portable from:
 https://sourceforge.net/projects/rportable/
 
-Install it into:
+Install it into: 安装到改目录下
 ```
 /<appname/dist/
 ```
