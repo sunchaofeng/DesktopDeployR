@@ -78,11 +78,11 @@ For example - a shiny app:
 Edit `app/packages.txt` - adding your app's primary package dependencies, one
 package per line.
 
-For a `shiny` app that depends on `ggplot`, `app/packages.txt` should look like:
+For a `shiny` app that depends on `ggplot`, `app/packages.txt` should look like:#将你的程序依赖的包写到app/packages.txt文件里
 ```
 jsonlite  # required by DesktopDeployR
-shiny
-ggplot
+shiny  #调用shiny包，则需要装shiny包
+ggplot #例如，需要画图，则安装ggplot包
 ```
 
 Packages listed here, along with their dependencies, are installed in a private
@@ -90,7 +90,7 @@ application library (`app/library`) when the application is run for the first
 time.
 
 Note, the above only works for packages available on CRAN. Custom packages need
-to be installed manually.  The recommended method is to use `devtools`:
+to be installed manually.  The recommended method is to use `devtools`:#注意，以上只适用于在 CRAN 上提供的软件包。 自定义软件包需要手动安装。 推荐的方法是使用 devtools:
 ```
 $ Rscript -e "devtools::install('path/to/package', lib = '<appname>/app/library')"
 ```
